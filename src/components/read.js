@@ -30,7 +30,7 @@ export default function Read() {
                                 <Table.Cell>{data.type}</Table.Cell>
                                 <Table.Cell>{data.email}</Table.Cell>
                                 <Table.Cell>{data.password}</Table.Cell>
-                                <Table.Cell>{data.notes}</Table.Cell>
+                                <Table.Cell>{data.note}</Table.Cell>
                         </Table.Row>
                         )
                     })}

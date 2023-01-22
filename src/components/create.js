@@ -18,15 +18,23 @@ export default function Create() {
             note
         })
         alert('Data saved')
+        document.getElementById('type1').value = '';
+        document.getElementById('email1').value = '';
+        document.getElementById('password1').value = '';
+        document.getElementById('note1').value = '';
     }
     
     function clear() {
-        if(window.confirm('Are you sure?')){
-            document.getElementById('type1').value = '';
-            document.getElementById('email1').value = '';
-            document.getElementById('password1').value = '';
-            document.getElementById('note1').value = '';
-        } 
+        // if(window.confirm('Are you sure?')){
+        //     document.getElementById('type1').value = '';
+        //     document.getElementById('email1').value = '';
+        //     document.getElementById('password1').value = '';
+        //     document.getElementById('note1').value = '';
+        // }
+        document.getElementById('type1').value = '';
+        document.getElementById('email1').value = '';
+        document.getElementById('password1').value = '';
+        document.getElementById('note1').value = ''; 
     }
 
     return (
