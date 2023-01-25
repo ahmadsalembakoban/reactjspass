@@ -15,6 +15,7 @@ export default function Read() {
     return (
         <div>
             <Table>
+                <Table.HeaderCell>Update</Table.HeaderCell>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Type</Table.HeaderCell>
