@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'semantic-ui-react';
+import { Table, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -12,10 +13,19 @@ export default function Read() {
         })
     }, [])
 
+    const setData = (data) => {
+        // console.log(data)
+        let {ID, type, email, password, note} = data;
+        localStorage.setItem('ID', ID);
+        localStorage.setItem('type', type);
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
+        localStorage.setItem('note', note);
+    }
+
     return (
         <div>
             <Table>
-                <Table.HeaderCell>Update</Table.HeaderCell>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Type</Table.HeaderCell>
@@ -32,7 +42,10 @@ export default function Read() {
                                 <Table.Cell>{data.email}</Table.Cell>
                                 <Table.Cell>{data.password}</Table.Cell>
                                 <Table.Cell>{data.note}</Table.Cell>
-                        </Table.Row>
+                                <Link to='/update'>
+                                <Table.Cell><Button onClick={() => setData(data)}> Update</Button></Table.Cell>
+                                </Link>
+                            </Table.Row>
                         )
                     })}
                 </Table.Body>
